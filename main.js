@@ -278,3 +278,26 @@
 
 // alert(min(-2, 1));
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=======================Ex 5.1=====================*/
+var admin, name;
+name = 'Vasyl';
+admin = name;
+alert(admin);
+
+/*=======================Ex 6.1=====================*/
+var planet = 'Earth';
+var userName = 'Petya';
