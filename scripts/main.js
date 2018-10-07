@@ -287,4 +287,5 @@
 // var planet = 'Earth';
 // var userName = 'Petya';
 
-alert(null == undefined);
+var myHeading = document.querySelector('h1');
+myHeading.textContent = 'Hello world!';
