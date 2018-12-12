@@ -289,3 +289,21 @@
 
 var myHeading = document.querySelector('h1');
 myHeading.textContent = 'Hello world!';
+
+/*=======================Ex 7.1=====================*/
+var random = [1, 2, 3, 4, 5, 6, 7, ['a', 'b', 'c']];
+
+for (var i = 0; i < random.length; i++) {
+    console.log(random[i]);
+};
+
+/*=======================Ex 7.1=====================*/
+var myData = 'Manchester,London,Liverpool,Birmingham,Leeds,Carlisle';
+var stArray = myData.split(',');
+
+stArray.length;
+stArray[stArray.length - 1];
+
+var myNewString = stArray.join(';'); //delimiter is different (various)
+
+var mySecondString = stArray.toString(); //delimiter is ',' only
