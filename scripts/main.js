@@ -287,34 +287,129 @@
 // var planet = 'Earth';
 // var userName = 'Petya';
 
-var myImage = document.querySelector('img');
 
-myImage.onclick = function() {
-    var mySrc = myImage.getAttribute('src');
-    if(mySrc === 'images/firefox-icon.png') {
-      myImage.setAttribute ('src','images/firefox2.png');
-    } else {
-      myImage.setAttribute ('src','images/firefox-icon.png');
-    }
+/*=======================My Test Site //Firefox=====================*/
+// var myImage = document.querySelector('img');
+
+// myImage.onclick = function() {
+//     var mySrc = myImage.getAttribute('src');
+//     if(mySrc === 'images/firefox-icon.png') {
+//       myImage.setAttribute ('src','images/firefox2.png');
+//     } else {
+//       myImage.setAttribute ('src','images/firefox-icon.png');
+//     }
+// }
+
+// var myButton = document.querySelector('button');
+// var myHeading = document.querySelector('h1');
+
+// function setUserName() {
+//     var myName = prompt('Please enter your name.');
+//     localStorage.setItem('name', myName);
+//     myHeading.innerHTML  = 'Mozilla is cool, ' + myName;
+//   }
+
+//   if(!localStorage.getItem('name')) {
+//     setUserName();
+//   } else {
+//     var storedName = localStorage.getItem('name');
+//     myHeading.innerHTML  = 'Mozilla is cool, ' + storedName;
+//   }
+
+//   myButton.onclick = function() {
+//     setUserName();
+//   }
+  /*=======================END - My Test Site //Firefox=====================*/
+
+  /*=======================Exercises=====================*/
+
+// var button = document.querySelector('button');
+
+// button.onclick = function() {
+//   var name = prompt('Как вас зовут?');
+//   alert('Привет, ' + name + ', рады тебя видеть!');
+// };
+
+// var dog = { name: 'Ramiro', breed: 'Deutch Ovcharka' };
+
+// var btn = document.querySelector('button');
+// var txt = document.querySelector('p');
+
+// btn.addEventListener('click', updateBtn);
+
+// function updateBtn() {
+//   if (btn.textContent === 'Start machine') {
+//     btn.textContent = 'Stop machine';
+//     txt.textContent = 'The machine has started!';
+//   } else {
+//     btn.textContent = 'Start machine';
+//     txt.textContent = 'The machine id stopped.';
+//   }
+// };
+
+
+/*======Filtering greeting messages======*/
+var list = document.querySelector('.output ul');
+list.innerHTML = '';
+var greetings = ['Happy Birthday!',
+                 'Merry Christmas my love',
+                 'A happy Christmas to all the family',
+                 'You\'re all I want for Christmas',
+                 'Get well soon'];
+
+for (var i = 0; i < greetings.length; i++) {
+  var input = greetings[i];
+  // Your conditional test needs to go inside the parentheses
+  // in the line below, replacing what's currently there
+  if (greetings[i].indexOf('Christmas') !== -1) {
+    var listItem = document.createElement('li');
+    listItem.textContent = input;
+    list.appendChild(listItem);
+  }
+};
+/*======END Filtering greeting messages======*/
+
+/*======Fixing capitalization======*/
+var list = document.querySelector('.output ul');
+list.innerHTML = '';
+var cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
+
+for (var i = 0; i < cities.length; i++) {
+  var input = cities[i];
+  // write your code just below here
+  var lowCase = input.toLowerCase();
+  var result = lowCase.replace(lowCase[0], lowCase[0].toUpperCase());
+  var listItem = document.createElement('li');
+  listItem.textContent = result;
+  list.appendChild(listItem);
+};
+/*======END Fixing capitalization======*/
+
+/*======Making new strings from old parts======*/
+
+var list = document.querySelector('.output ul');
+list.innerHTML = '';
+var stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
+                'GNF576746573fhdg4737dh4;Greenfield',
+                'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',
+                'SYB4f65hf75f736463;Stalybridge',
+                'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield',
+                'HRKyr43d4d56d3hy;Kharkiv International Airport'];
+
+for (var i = 0; i < stations.length; i++) {
+  var input = stations[i];
+  // write your code just below here
+  var abbreviation = input.slice(0,3);
+  var numberOfSemicol = input.indexOf(';');
+  var text = input.slice(numberOfSemicol + 1);
+  var result = abbreviation + ': ' + text;
+
+  var listItem = document.createElement('li');
+  listItem.textContent = result;
+  list.appendChild(listItem);
 }
+/*======END Making new strings from old parts======*/
 
-var myButton = document.querySelector('button');
-var myHeading = document.querySelector('h1');
-
-function setUserName() {
-    var myName = prompt('Please enter your name.');
-    localStorage.setItem('name', myName);
-    myHeading.innerHTML  = 'Mozilla is cool, ' + myName;
-  }
-
-  if(!localStorage.getItem('name')) {
-    setUserName();
-  } else {
-    var storedName = localStorage.getItem('name');
-    myHeading.innerHTML  = 'Mozilla is cool, ' + storedName;
-  }
-
-  myButton.onclick = function() {
-    setUserName();
-  }
-  
+var shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
+var random = ['kro', 555, ['chy', 'pa', 'ka']];
+random[2][0][1][2];
