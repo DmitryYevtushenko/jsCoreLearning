@@ -302,6 +302,8 @@
 
 // var myButton = document.querySelector('button');
 // var myHeading = document.querySelector('h1');
+// myHeading.textContent = 'Hello world!';
+
 
 // function setUserName() {
 //     var myName = prompt('Please enter your name.');
@@ -349,67 +351,88 @@
 
 
 /*======Filtering greeting messages======*/
-var list = document.querySelector('.output ul');
-list.innerHTML = '';
-var greetings = ['Happy Birthday!',
-                 'Merry Christmas my love',
-                 'A happy Christmas to all the family',
-                 'You\'re all I want for Christmas',
-                 'Get well soon'];
+// var list = document.querySelector('.output ul');
+// list.innerHTML = '';
+// var greetings = ['Happy Birthday!',
+//                  'Merry Christmas my love',
+//                  'A happy Christmas to all the family',
+//                  'You\'re all I want for Christmas',
+//                  'Get well soon'];
 
-for (var i = 0; i < greetings.length; i++) {
-  var input = greetings[i];
-  // Your conditional test needs to go inside the parentheses
-  // in the line below, replacing what's currently there
-  if (greetings[i].indexOf('Christmas') !== -1) {
-    var listItem = document.createElement('li');
-    listItem.textContent = input;
-    list.appendChild(listItem);
-  }
-};
+// for (var i = 0; i < greetings.length; i++) {
+//   var input = greetings[i];
+//   // Your conditional test needs to go inside the parentheses
+//   // in the line below, replacing what's currently there
+//   if (greetings[i].indexOf('Christmas') !== -1) {
+//     var listItem = document.createElement('li');
+//     listItem.textContent = input;
+//     list.appendChild(listItem);
+//   }
+// };
 /*======END Filtering greeting messages======*/
 
 /*======Fixing capitalization======*/
-var list = document.querySelector('.output ul');
-list.innerHTML = '';
-var cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
+// var list = document.querySelector('.output ul');
+// list.innerHTML = '';
+// var cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
 
-for (var i = 0; i < cities.length; i++) {
-  var input = cities[i];
-  // write your code just below here
-  var lowCase = input.toLowerCase();
-  var result = lowCase.replace(lowCase[0], lowCase[0].toUpperCase());
-  var listItem = document.createElement('li');
-  listItem.textContent = result;
-  list.appendChild(listItem);
-};
+// for (var i = 0; i < cities.length; i++) {
+//   var input = cities[i];
+//   // write your code just below here
+//   var lowCase = input.toLowerCase();
+//   var result = lowCase.replace(lowCase[0], lowCase[0].toUpperCase());
+//   var listItem = document.createElement('li');
+//   listItem.textContent = result;
+//   list.appendChild(listItem);
+// };
 /*======END Fixing capitalization======*/
 
 /*======Making new strings from old parts======*/
 
-var list = document.querySelector('.output ul');
-list.innerHTML = '';
-var stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
-                'GNF576746573fhdg4737dh4;Greenfield',
-                'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',
-                'SYB4f65hf75f736463;Stalybridge',
-                'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield',
-                'HRKyr43d4d56d3hy;Kharkiv International Airport'];
+// var list = document.querySelector('.output ul');
+// list.innerHTML = '';
+// var stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
+//                 'GNF576746573fhdg4737dh4;Greenfield',
+//                 'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',
+//                 'SYB4f65hf75f736463;Stalybridge',
+//                 'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield',
+//                 'HRKyr43d4d56d3hy;Kharkiv International Airport'];
 
-for (var i = 0; i < stations.length; i++) {
-  var input = stations[i];
-  // write your code just below here
-  var abbreviation = input.slice(0,3);
-  var numberOfSemicol = input.indexOf(';');
-  var text = input.slice(numberOfSemicol + 1);
-  var result = abbreviation + ': ' + text;
+// for (var i = 0; i < stations.length; i++) {
+//   var input = stations[i];
+//   // write your code just below here
+//   var abbreviation = input.slice(0,3);
+//   var numberOfSemicol = input.indexOf(';');
+//   var text = input.slice(numberOfSemicol + 1);
+//   var result = abbreviation + ': ' + text;
 
-  var listItem = document.createElement('li');
-  listItem.textContent = result;
-  list.appendChild(listItem);
-}
+//   var listItem = document.createElement('li');
+//   listItem.textContent = result;
+//   list.appendChild(listItem);
+// }
 /*======END Making new strings from old parts======*/
 
-var shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
-var random = ['kro', 555, ['chy', 'pa', 'ka']];
-random[2][0][1][2];
+// var shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
+// var random = ['kro', 555, ['chy', 'pa', 'ka']];
+// random[2][0][1][2];
+
+/*===Arrays===*/
+/*=======================Ex 1=====================*/
+// var random = [1, 2, 3, 4, 5, 6, 7, ['a', 'b', 'c']];
+
+// for (var i = 0; i < random.length; i++) {
+//     console.log(random[i]);
+// };
+
+/*=======================Ex 2=====================*/
+// var myData = 'Manchester,London,Liverpool,Birmingham,Leeds,Carlisle';
+// var stArray = myData.split(',');
+
+// stArray.length;
+// stArray[stArray.length - 1];
+
+// var myNewString = stArray.join(';'); //delimiter is different (various)
+
+// var mySecondString = stArray.toString(); //delimiter is ',' only
+
+/*==========Printing those products==========*/
