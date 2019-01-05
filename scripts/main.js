@@ -441,25 +441,27 @@ var totalBox = document.querySelector('.output p');
 var total = 0;
 list.innerHTML = '';
 totalBox.textContent = '';
-// number 1 - do an array
-                'Underpants:6.99'
-                'Socks:5.99'
-                'T-shirt:14.99'
-                'Trousers:31.99'
-                'Shoes:23.99';
 
-for (var i = 0; i <= 0; i++) {
+//number 1 - do an array
+var products = ['Underpants:6.99',
+                'Socks:5.99',
+                'T-shirt:14.99',
+                'Trousers:31.99',
+                'Shoes:23.99'];
+
+for (var i = 0; i < products.length; i++) {
   // number 2 - change the condition to array's length
   // number 3
-
+  var productsSeparate = products[i].split(':');
+  var price = +productsSeparate[1];
   // number 4
-  
+  total += price;
   // number 5
-  itemText = 0;
+  itemText = productsSeparate[0] + ' - ' + '$' + price;
   
   var listItem = document.createElement('li');
   listItem.textContent = itemText;
   list.appendChild(listItem);
 }
-
 totalBox.textContent = 'Total: $' + total.toFixed(2);
+/*======= END Printing those products=======*/
