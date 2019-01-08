@@ -436,70 +436,111 @@
 // var mySecondString = stArray.toString(); //delimiter is ',' only
 
 /*==========Printing those products==========*/
-var list = document.querySelector('.output ul');
-var totalBox = document.querySelector('.output p');
-var total = 0;
-list.innerHTML = '';
-totalBox.textContent = '';
+// var list = document.querySelector('.output ul');
+// var totalBox = document.querySelector('.output p');
+// var total = 0;
+// list.innerHTML = '';
+// totalBox.textContent = '';
 
-//number 1 - do an array
-var products = ['Underpants:6.99',
-                'Socks:5.99',
-                'T-shirt:14.99',
-                'Trousers:31.99',
-                'Shoes:23.99'];
+// //number 1 - do an array
+// var products = ['Underpants:6.99',
+//                 'Socks:5.99',
+//                 'T-shirt:14.99',
+//                 'Trousers:31.99',
+//                 'Shoes:23.99'];
 
-for (var i = 0; i < products.length; i++) {
-  // number 2 - change the condition to array's length
-  // number 3
-  var productsSeparate = products[i].split(':');
-  var price = +productsSeparate[1];
-  // number 4
-  total += price;
-  // number 5
-  itemText = productsSeparate[0] + ' - ' + '$' + price;
+// for (var i = 0; i < products.length; i++) {
+//   // number 2 - change the condition to array's length
+//   // number 3
+//   var productsSeparate = products[i].split(':');
+//   var price = +productsSeparate[1];
+//   // number 4
+//   total += price;
+//   // number 5
+//   itemText = productsSeparate[0] + ' - ' + '$' + price;
   
-  var listItem = document.createElement('li');
-  listItem.textContent = itemText;
-  list.appendChild(listItem);
-}
-totalBox.textContent = 'Total: $' + total.toFixed(2);
+//   var listItem = document.createElement('li');
+//   listItem.textContent = itemText;
+//   list.appendChild(listItem);
+// }
+// totalBox.textContent = 'Total: $' + total.toFixed(2);
 /*======= END Printing those products=======*/
 
 /*==========Top 5 searches==========*/
-var list = document.querySelector('.output ul');
-var searchInput = document.querySelector('.output input');
-var searchBtn = document.querySelector('.output button');
-list.innerHTML = '';
-var myHistory = [];
+// var list = document.querySelector('.output ul');
+// var searchInput = document.querySelector('.output input');
+// var searchBtn = document.querySelector('.output button');
+// list.innerHTML = '';
+// var myHistory = [];
 
-searchBtn.onclick = function() {
-  // we will only allow a term to be entered if the search input isn't empty
-    if ((searchInput.value !== '')&&(searchInput.value !== myHistory[0])&&(searchInput.value !== myHistory[1])&&(searchInput.value !== myHistory[2])&&(searchInput.value !== myHistory[3])&&(searchInput.value !== myHistory[4])) {
-      // number 1
-      myHistory.unshift(searchInput.value);
-      // empty the list so that we don't display duplicate entries
-      // the display is regenerated every time a search term is entered.
-      list.innerHTML = '';
+// searchBtn.onclick = function() {
+//   // we will only allow a term to be entered if the search input isn't empty
+//     if ((searchInput.value !== '')&&(searchInput.value !== myHistory[0])&&(searchInput.value !== myHistory[1])&&(searchInput.value !== myHistory[2])&&(searchInput.value !== myHistory[3])&&(searchInput.value !== myHistory[4])) {
+//       // number 1
+//       myHistory.unshift(searchInput.value);
+//       // empty the list so that we don't display duplicate entries
+//       // the display is regenerated every time a search term is entered.
+//       list.innerHTML = '';
 
-      // loop through the array, and display all the search terms in the list
-      for (var i = 0; i < myHistory.length; i++) {
-        itemText = myHistory[i];
-        var listItem = document.createElement('li');
-        listItem.textContent = itemText;
-        list.appendChild(listItem);
-      }
+//       // loop through the array, and display all the search terms in the list
+//       for (var i = 0; i < myHistory.length; i++) {
+//         itemText = myHistory[i];
+//         var listItem = document.createElement('li');
+//         listItem.textContent = itemText;
+//         list.appendChild(listItem);
+//       }
 
-      // If the array length is 5 or more, remove the oldest search term
-      if (myHistory.length >= 5) {
-        // number 2
-        myHistory.pop();
-      }
+//       // If the array length is 5 or more, remove the oldest search term
+//       if (myHistory.length >= 5) {
+//         // number 2
+//         myHistory.pop();
+//       }
 
-      // empty the search input and focus it, ready for the next term to be entered
-      searchInput.value = '';
-      searchInput.focus();
-    }
+//       // empty the search input and focus it, ready for the next term to be entered
+//       searchInput.value = '';
+//       searchInput.focus();
+//     }
   
-}
+// }
 /*==========END Top 5 searches==========*/
+
+/*==========Silly story generator==========*/
+var customName = document.getElementById('customname');
+var randomize = document.querySelector('.randomize');
+var story = document.querySelector('.story');
+
+function randomValueFromArray(array){
+  return array[Math.floor(Math.random()*array.length)];
+}
+
+var storyText = 'It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.';
+var insertX = ['Willy the Goblin',
+                'Big Daddy',
+                'Father Christmas'];
+var insertY = ['the soup kitchen',
+                'Disneyland',
+                'the White House'];
+var insertZ = ['spontaneously combusted',
+                'melted into a puddle on the sidewalk',
+                'turned into a slug and crawled away'];
+
+//EVENT LISTENER AND PARTIAL FUNCTION DEFINITION:
+randomize.addEventListener('click', result);
+
+function result() {
+
+  if(customName.value !== '') {
+    var name = customName.value;
+
+  }
+
+  if(document.getElementById("uk").checked) {
+    var weight = Math.round(300);
+    var temperature =  Math.round(94);
+
+  }
+
+  story.textContent = ;
+  story.style.visibility = 'visible';
+}
+/*==========END Silly story generator==========*/
