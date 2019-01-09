@@ -505,6 +505,57 @@
 /*==========END Top 5 searches==========*/
 
 /*==========Silly story generator==========*/
+// var customName = document.getElementById('customname');
+// var randomize = document.querySelector('.randomize');
+// var story = document.querySelector('.story');
+
+// function randomValueFromArray(array){
+//   return array[Math.floor(Math.random()*array.length)];
+// }
+
+// var storyText = 'It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.';
+// var insertX = ['Willy the Goblin',
+//                 'Big Daddy',
+//                 'Father Christmas'];
+// var insertY = ['the soup kitchen',
+//                 'Disneyland',
+//                 'the White House'];
+// var insertZ = ['spontaneously combusted',
+//                 'melted into a puddle on the sidewalk',
+//                 'turned into a slug and crawled away'];
+
+// //EVENT LISTENER AND PARTIAL FUNCTION DEFINITION:
+// randomize.addEventListener('click', result);
+
+// function result() {
+//   var newStory = storyText;
+//   var xItem = randomValueFromArray(insertX);
+//   var yItem = randomValueFromArray(insertY);
+//   var zItem = randomValueFromArray(insertZ);
+  
+//   newStory = newStory.replace(':insertx:', xItem);
+//   newStory = newStory.replace(':insertx:', xItem);
+//   newStory = newStory.replace(':inserty:', yItem);
+//   newStory = newStory.replace(':insertz:', zItem);
+
+//   if(customName.value !== '') {
+//     var name = customName.value;
+//     newStory = newStory.replace('Bob', name);
+//   }
+
+//   if(document.getElementById("uk").checked) {
+//     var weight = Math.round(21,4286) + ' stone';
+//     var temperature =  Math.round(34,4444) + ' centigrade';
+//     newStory = newStory.replace('300 pounds', weight);
+//     newStory = newStory.replace('94 fahrenheit', temperature);
+//   }
+
+//   story.textContent = newStory;
+//   story.style.visibility = 'visible';
+// }
+/*==========END Silly story generator==========*/
+
+/*==========Silly story generator Rus==========*/
 var customName = document.getElementById('customname');
 var randomize = document.querySelector('.randomize');
 var story = document.querySelector('.story');
@@ -513,34 +564,45 @@ function randomValueFromArray(array){
   return array[Math.floor(Math.random()*array.length)];
 }
 
-var storyText = 'It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.';
-var insertX = ['Willy the Goblin',
-                'Big Daddy',
-                'Father Christmas'];
-var insertY = ['the soup kitchen',
-                'Disneyland',
-                'the White House'];
-var insertZ = ['spontaneously combusted',
-                'melted into a puddle on the sidewalk',
-                'turned into a slug and crawled away'];
+var storyText = 'Было холодно, 94 градуса по Фаренгейту! И так, :insertx: гулял по округе... Когда он подошел к :inserty:, он остановился и смотрел в ужасе несколько мгновений, и вдруг :insertz:. Боб все это видел, но не удивился - :insertx: весил 300 фунтов, и это был жаркий день.';
+
+var insertX = ['Чудной зверек',
+                'Вредный хорек',
+                'Голодный хищник'];
+var insertY = ['ресторану суши',
+                'памятнику Вороне',
+                'Порошенко'];
+var insertZ = ['спонтанно загорелся',
+                'растаял в луже на тротуаре',
+                'превратился в слизняка и уполз'];
 
 //EVENT LISTENER AND PARTIAL FUNCTION DEFINITION:
 randomize.addEventListener('click', result);
 
 function result() {
+  var newStory = storyText;
+  var xItem = randomValueFromArray(insertX);
+  var yItem = randomValueFromArray(insertY);
+  var zItem = randomValueFromArray(insertZ);
+  
+  newStory = newStory.replace(':insertx:', xItem);
+  newStory = newStory.replace(':insertx:', xItem);
+  newStory = newStory.replace(':inserty:', yItem);
+  newStory = newStory.replace(':insertz:', zItem);
 
   if(customName.value !== '') {
     var name = customName.value;
-
+    newStory = newStory.replace('Боб', name);
   }
 
   if(document.getElementById("uk").checked) {
-    var weight = Math.round(300);
-    var temperature =  Math.round(94);
-
+    var weight = Math.round(136,078) + ' килограмм';
+    var temperature =  Math.round(34,4444) + ' градуса Цельсия';
+    newStory = newStory.replace('300 фунтов', weight);
+    newStory = newStory.replace('94 градуса по Фаренгейту', temperature);
   }
 
-  story.textContent = ;
+  story.textContent = newStory;
   story.style.visibility = 'visible';
 }
 /*==========END Silly story generator==========*/
