@@ -607,4 +607,9 @@
 // }
 /*==========END Silly story generator==========*/
 
-alert('Dima');
+var select = document.querySelector('select');
+var para = document.querySelector('p');
+
+select.addEventListener('change', setWeather);
+
+function setWeather()
