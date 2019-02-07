@@ -596,8 +596,8 @@ function result() {
   }
 
   if(document.getElementById("uk").checked) {
-    var weight = Math.round(136,078) + ' килограмм';
-    var temperature =  Math.round(34,4444) + ' градуса Цельсия';
+    var weight = Math.round(136.078) + ' килограмм';
+    var temperature =  Math.round(34.4444) + ' градуса Цельсия';
     newStory = newStory.replace('300 фунтов', weight);
     newStory = newStory.replace('94 градуса по Фаренгейту', temperature);
   }
