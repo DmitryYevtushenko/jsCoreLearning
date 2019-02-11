@@ -607,68 +607,49 @@
 // }
 /*==========END Silly story generator==========*/
 
-var select = document.querySelector('select');
-var para = document.querySelector('p');
+/*==========Exercise children's helping==========*/
+// var help = false;
+// var fee = 5;
 
-select.addEventListener('change', setWeather);
+// if (help === true) {
+//     var result = fee + 5;
+// };
+// console.log(result);
+/*==========END Exercise==========*/
 
-function setWeather() {
-  var choice = select.value;
+/*==========Exercise children's helping v.2==========*/
+// var help = false;
+// var fee = 5;
 
-  if (choice === 'sunny') {
-    para.textContent = 'Сегодня хорошо и солнечно. Носите шорты! Идите на пляж, или в парк, и купите мороженое.'
-  } else if (choice === 'rainy') {
-    para.textContent = 'Дождь падает за окном; возьмите плащ и зонт, и не находитесь слишком долго на улице.'
-  } else if (choice === 'snowing') {
-    para.textContent = 'Снег падает - морозно! Лучше всего посидеть с чашкой горячего шоколада или слепить снеговика.'
-  } else if (choice === 'overcast') {
-    para.textContent = 'Дождя нет, но небо серое и мрачное; он все может измениться в любую минуту, поэтому на всякий случай возьмите дождевик.'
-  } else {
-    para.textContent = ''
-  }
-};
+// if (help) {
+//     var result = fee + 5;
+// };
+// console.log(result);
+/*==========END Exercise==========*/
 
 /*==========Exercise==========*/
-/*
- * @param {Number} hours
- * @param {Number} minutes
- * @returns {Boolean}
- */
-module.exports = function (hours, minutes) {
-    if (hours >= 0 && hours <= 23) {
-        if (minutes > 0 && minutes <= 59) {
-            return true;
-        }
-    } else {
-        return false
-    };
-};
+// var select = document.querySelector('select');
+// var para = document.querySelector('p');
 
-    // switch(hours) {
-    //     case hours >= 0:
-    //     return true;
-    //     case hours <= 23:
-    //     return true;
-    // };
+// select.addEventListener('change', setWeather);
 
-    // switch(minutes) {
-    //     case minutes >= 0:
-    //     case minutes <= 59:
-    //     return true
-    //     default:
-    //     return false
-    // };
-    
-    // if (hours && minutes == true) {
-    //     return true
-    // } else {
-    //     return false
-    // };
+// function setWeather() {
+//     var choice = select.value;
 
-    if (hours >= 0 && hours <= 23) {
-        // return true;
-    } else if (minutes >= 0 && minutes <= 59) {
-        return true;
-    } else {
-        return false;
-    };
+//     if (choice === 'sunny') {
+//         if (temperature < 86) {
+//             para.textContent = 'Сейчас ' + temperature + ' градусов по фаренгейту — хорошо и солнечно. Идите на пляж, или в парк, и купите мороженое.';
+//         } else if (temperature >= 86) {
+//             para.textContent = 'Сейчас ' + temperature + ' градусов по фаренгейту — Жара! Если вы хотите выйти на улицу, обязательно используйте солнцезащитный крем.';
+//         }
+//     } else if (choice === 'rainy') {
+//         para.textContent = 'Дождь падает за окном; возьмите плащ и зонт, и не находитесь слишком долго на улице.'
+//     } else if (choice === 'snowing') {
+//         para.textContent = 'Снег падает - морозно! Лучше всего посидеть с чашкой горячего шоколада или слепить снеговика.'
+//     } else if (choice === 'overcast') {
+//         para.textContent = 'Дождя нет, но небо серое и мрачное; он все может измениться в любую минуту, поэтому на всякий случай возьмите дождевик.'
+//     } else {
+//         para.textContent = ''
+//     }
+// };
+/*==========END Exercise==========*/
