@@ -654,8 +654,6 @@
 // };
 /*==========END Exercise==========*/
 
-<<<<<<< HEAD
-=======
 /*==========Exercise==========*/
 // module.exports = function (hours, minutes) {
 //   if ((hours < 0 || hours > 23) || (minutes < 0 || minutes > 59)) {
@@ -665,4 +663,46 @@
 //   }
 // }
 /*==========END Exercise==========*/
->>>>>>> 2a16effef2998f14faf48bc68d031ebb497aa74e
+
+/*==========Exercise==========*/
+// var select = document.querySelector('select');
+// var para = document.querySelector('p');
+
+// select.addEventListener('change', setWeather);
+
+// function setWeather() {
+//     var choice = select.value;
+
+//     switch (choice) {
+//       case 'sunny':
+//         para.textContent = 'Сегодня хорошо и солнечно. Наденьте шорты! Идите на пляж или в парк, и купите мороженое.';
+//         break;
+//       case 'rainy':
+//         para.textContent = 'На улице дождь. Возьмите плащ и зонт, и не гуляйте слишком долго';
+//         break;
+//       case 'snowing':
+//         para.textContent = 'Идет снег - морозно! Лучше всего посидеть с чашкой горячего шоколада или слепить снеговика.';
+//         break;
+//       case 'overcast':
+//         para.textContent = 'Дождя нет, но небо серое и мрачное; он все может измениться в любую минуту, поэтому на всякий случай возьмите дождевик.';
+//         break;
+//       default:
+//         para.textContent = '';
+//     }
+// };
+/*==========END Exercise==========*/
+
+/*==========Тернарный оператор==========*/
+// var select = document.querySelector('select');
+// var html = document.querySelector('html');
+// document.body.style.padding = '10px';
+
+// function update(bgColor, textColor) {
+//   html.style.backgroundColor = bgColor;
+//   html.style.color = textColor;
+// }
+
+// select.onchange = function() {
+//   ( select.value === 'black' ) ? update('black','white') : update('white','black');
+// }
+/*==========END Тернарный оператор==========*/
