@@ -654,3 +654,15 @@
 // };
 /*==========END Exercise==========*/
 
+<<<<<<< HEAD
+=======
+/*==========Exercise==========*/
+// module.exports = function (hours, minutes) {
+//   if ((hours < 0 || hours > 23) || (minutes < 0 || minutes > 59)) {
+//     return false
+//   } else {
+//     return true
+//   }
+// }
+/*==========END Exercise==========*/
+>>>>>>> 2a16effef2998f14faf48bc68d031ebb497aa74e
