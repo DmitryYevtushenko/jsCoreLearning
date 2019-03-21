@@ -706,3 +706,90 @@
 //   ( select.value === 'black' ) ? update('black','white') : update('white','black');
 // }
 /*==========END Тернарный оператор==========*/
+
+// "" + 1 + 0 //'10' +
+// "" - 1 + 0 //-1 +
+// true + false //1 +
+// 6 / "3" //2 +
+// "2" * "3" //6
+// 4 + 5 + "px" //'45px' -(9px)
+// "$" + 4 + 5 //'$45' +
+// "4" - 2 //2 +
+// "4px" - 2 //2 -(NaN)
+// 7 / 0 //NaN -(Infinity)
+// "  -9\n" + 5 //'  -9\n5' +
+// "  -9\n" - 5 //-14 +
+// 5 && 2 //2 +
+// 2 && 5 //5 +
+// 5 || 0 //5 +
+// 0 || 5 //5 +
+// null + 1 //1 +
+// undefined + 1 //1 -(NaN)
+// null == "\n0\n" //true -(false)
+// +null == +"\n0\n" //true +
+// for (i = 1; i <= 100; i++) {
+//   if (i % 3 == 0 && i % 5 == 0) {
+//     num = 'foobar'
+//   } else if (i % 3 == 0) {
+//     num = 'foo'
+//   } else if (i % 5 == 0) {
+//     num = 'bar'
+//   } else {
+//     num = i
+//   };
+//   alert(num);
+// }
+
+
+// При помощи цикла for выведите чётные числа от 2 до 10
+
+for (i = 1; i <= 10; i++) {
+  if (i % 2 == 0) {
+    alert(i)
+  }
+}
+
+// Перепишите код, заменив цикл for на while, без изменения поведения цикла.
+
+for (var i = 0; i < 3; i++) {
+  alert( "номер " + i + "!" );
+}
+
+var i = 0;
+while (i < 3) {
+  alert( "номер " + i + "!" );
+  i++;
+}
+
+// Повторять цикл, пока ввод неверен
+
+var num = +prompt('Enter number grater than 100', '');
+
+while (num <= 100) {
+  if (num == 0) {
+    break
+  } else {
+    num = +prompt('Number you entered less than 100, enter another one', '');
+  }
+}
+
+
+var num;
+
+do {
+  num = prompt("Введите число больше 100?", 0);
+} while (num <= 100 && num != null);
+
+
+// Создайте код, который выводит все простые числа из интервала от 2 до 10
+// P.S. Код также должен легко модифицироваться для любых других интервалов.
+
+nextVal:
+for (i = 1; i <= 10; i++) {
+  for (n = 2; n < i; n++) {
+    if (i % n == 0) {
+      continue nextVal
+    }
+  }
+  console.log(i)
+}
