@@ -741,55 +741,81 @@
 // }
 
 
+// "" + 1 + 0 // '10'
+// "" - 1 + 0 // -1
+// true + false // 1
+// 6 / "3" // 2
+// "2" * "3" // 6
+// 4 + 5 + "px" // '45px' > '9px'
+// "$" + 4 + 5 // '$45'
+// "4" - 2 // 2
+// "4px" - 2 // NaN
+// 7 / 0 // Infinity
+// "  -9  " + 5 // '  -9  5'
+// "  -9  " - 5 // -14
+// null + 1 // 1
+// undefined + 1 // NaN
+
+
 // При помощи цикла for выведите чётные числа от 2 до 10
 
-for (i = 1; i <= 10; i++) {
-  if (i % 2 == 0) {
-    alert(i)
-  }
-}
+// for (i = 1; i <= 10; i++) {
+//   if (i % 2 == 0) {
+//     alert(i)
+//   }
+// }
 
 // Перепишите код, заменив цикл for на while, без изменения поведения цикла.
 
-for (var i = 0; i < 3; i++) {
-  alert( "номер " + i + "!" );
-}
+// for (var i = 0; i < 3; i++) {
+//   alert( "номер " + i + "!" );
+// }
 
-var i = 0;
-while (i < 3) {
-  alert( "номер " + i + "!" );
-  i++;
-}
+// var i = 0;
+// while (i < 3) {
+//   alert( "номер " + i + "!" );
+//   i++;
+// }
 
 // Повторять цикл, пока ввод неверен
 
-var num = +prompt('Enter number grater than 100', '');
+// var num = +prompt('Enter number grater than 100', '');
 
-while (num <= 100) {
-  if (num == 0) {
-    break
-  } else {
-    num = +prompt('Number you entered less than 100, enter another one', '');
-  }
-}
+// while (num <= 100) {
+//   if (num == 0) {
+//     break
+//   } else {
+//     num = +prompt('Number you entered less than 100, enter another one', '');
+//   }
+// }
 
 
-var num;
+// var num;
 
-do {
-  num = prompt("Введите число больше 100?", 0);
-} while (num <= 100 && num != null);
+// do {
+//   num = prompt("Введите число больше 100?", 0);
+// } while (num <= 100 && num != null);
 
 
 // Создайте код, который выводит все простые числа из интервала от 2 до 10
 // P.S. Код также должен легко модифицироваться для любых других интервалов.
 
-nextVal:
-for (i = 1; i <= 10; i++) {
-  for (n = 2; n < i; n++) {
-    if (i % n == 0) {
-      continue nextVal
-    }
-  }
-  console.log(i)
-}
+// nextVal:
+// for (i = 1; i <= 10; i++) {
+//   for (n = 2; n < i; n++) {
+//     if (i % n == 0) {
+//       continue nextVal
+//     }
+//   }
+//   console.log(i)
+// }
+
+
+// let sum = 0;
+
+// while (true) {
+//   let val = +prompt('Enter a number:', '');
+//   if (!val) break;
+//   sum += val;
+// }
+// alert (`Sum is ${sum}`);
