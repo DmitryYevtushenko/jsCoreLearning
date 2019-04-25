@@ -800,22 +800,72 @@
 // Создайте код, который выводит все простые числа из интервала от 2 до 10
 // P.S. Код также должен легко модифицироваться для любых других интервалов.
 
-// nextVal:
-// for (i = 1; i <= 10; i++) {
-//   for (n = 2; n < i; n++) {
-//     if (i % n == 0) {
-//       continue nextVal
+// loop:
+// for (let n = 2; n <= 10; n++) {
+//   for (let i = 2; i < n; i++) {
+//     if ((n % i) == 0) {
+//       continue loop;
 //     }
 //   }
-//   console.log(i)
+//   console.log (n);
+// }
+
+//Exercise
+// switch (browser) {
+//   case 'Edge':
+//     alert( "You've got the Edge!" );
+//     break;
+
+//   case 'Chrome':
+//   case 'Firefox':
+//   case 'Safari':
+//   case 'Opera':
+//     alert( 'Okay we support these browsers too' );
+//     break;
+
+//   default:
+//     alert( 'We hope that this page looks ok!' );
 // }
 
 
-// let sum = 0;
+// if (browser === 'Edge') {
+//   alert( "You've got the Edge!" );
+// } else if (browser === 'Chrome' 
+//         || browser === 'Firefox' 
+//         || browser === 'Safari' 
+//         || browser === 'Opera') {
+//   alert( 'Okay we support these browsers too' );
+// } else {
+//   alert( 'We hope that this page looks ok!' );
+// };
 
-// while (true) {
-//   let val = +prompt('Enter a number:', '');
-//   if (!val) break;
-//   sum += val;
+
+// Exercise 2:
+// let a = +prompt('a?', '');
+
+// if (a == 0) {
+//   alert( 0 );
 // }
-// alert (`Sum is ${sum}`);
+// if (a == 1) {
+//   alert( 1 );
+// }
+
+// if (a == 2 || a == 3) {
+//   alert( '2,3' );
+// }
+
+
+// switch (a) {
+//   case 0:
+//     alert(0);
+//     break;
+
+//   case 1:
+//     alert(1);
+//     break;
+
+//   case 2:
+//   case 3:
+//     alert('2,3');
+//     break;
+// }
