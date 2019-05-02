@@ -869,3 +869,69 @@
 //     alert('2,3');
 //     break;
 // }
+
+
+/* === functions === */
+//rewrite the function:
+
+// function checkAge(age) {
+//   if (age > 18) {
+//     return true;
+//   } else {
+//     return confirm('Do you have your parents permission to access this page?');
+//   }
+// }
+
+// //using ? operator:
+// function checkAge(age) {
+//   return (age > 18) ? true : confirm('Do you have yuor parents permission to access this page?');
+// };
+
+// //using || operator
+// function checkAge(age) {
+//   return (age > 18) || confirm('Do you have yuor parents permission to access this page?');
+// };
+
+
+/* === Function min(a, b) === */
+//Write a function min(a,b) which returns the least of two numbers a and b.
+
+// function getMin(a, b) {
+//   return (a < b) ? a : b;
+// }
+
+
+//Write a function pow(x,n) that returns x in power n. Or, in other words, multiplies x by itself n times and returns the result.
+// *In this task the function should support only natural values of n: integers up from 1
+
+//Power -5 is not supported, use an integer greater than 0
+// let num, power;
+
+// do {
+//   num = prompt('Enter a number', '1');
+//   if (num === null) break;
+// }
+// while (!isNum(+num));
+
+// do {
+//   power = prompt('Enter a power (natural number up from 0)', '1');
+//   if (power === null) break;
+// }
+// while (!isNum(+power) || (power <= 0));
+
+// if (num && power) {
+//   alert(`${num} in power ${power} is ${getPow(num, power)}`);
+// }
+
+
+// function isNum(val) {
+//   return Number(val) === val;
+// };
+
+// function getPow(a, n) {
+//   let pow = a;
+//   for (let i = 1; i <= n; i++) {
+//     pow *= a;
+//   }
+//   return pow;
+// };
