@@ -952,7 +952,33 @@
 
 //* decision *
 // ask(
-//   "Do you agree?",
+  // "Do you agree?",
 //   () => alert("You agreed."),
 //   () => alert("You canceled the execution.")
 // );
+
+
+// const name = 'Samsung Galaxy';
+// const query = 'sAms';
+
+// function has(str, part) {
+//   str = str.toUpperCase();
+//   part = part.toUpperCase();
+
+//   return str.includes(part);
+// }
+
+
+// //=========================
+
+// const word = 'samsung is gnusmas';
+
+// function up3FirstAndLast(str) {
+//   return 
+// }
+
+// up3FirstAndLast(word) === 'SAMsung is gnusMAS'
+
+
+// startsWith – true/false если строка начинается с подстроки
+// endsWith – true/false если строка заканчивается подстрокой
