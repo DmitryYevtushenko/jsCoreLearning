@@ -982,3 +982,58 @@
 
 // startsWith – true/false если строка начинается с подстроки
 // endsWith – true/false если строка заканчивается подстрокой
+
+
+/* === Ex: Uppercast the first character === */
+// function firstLetterToUpper (str) {
+//   let result = str.trimStart();
+//   if(!result) return '';
+
+//   const toUpper = result[0].toUpperCase();
+//   result = toUpper + result.slice(1);
+//   return result;
+// }
+
+
+/* === Ex: Check for spam === */
+// Write a function checkSpam(str) that returns true if str contains ‘viagra’ or ‘XXX’, otherwise false.
+// The function must be case-insensitive
+// function checkSpam(str) {
+//   let result = str.toUpperCase();
+//   return (result.includes('VIAGRA') 
+//         || result.includes('XXX'));
+// }
+
+
+/* === Ex: Truncate the text === */
+// Create a function truncate(str, maxlength) that checks the length of the str and, 
+// if it exceeds maxlength – replaces the end of str with the ellipsis character "…", 
+// to make its length equal to maxlength.
+// The result of the function should be the truncated (if needed) string.
+// function truncate(str, maxLength) {
+//   let result = str;
+  
+//   if (result.length < maxLength) {
+//     return result;
+//   }
+//   result = str.slice(0, maxLength - 1) + "\u2026";
+//   return result;
+// }
+
+//v.2
+// function truncate(str, maxLength) {
+//   return (str.length < maxLength) ? str :
+//                                   str.slice(0, maxLength - 1) + "\u2026";
+// }
+
+
+/* === Ex: Extract the money === */
+// function extractCurrencyValue(str) {
+//   //использование регулярного выражения (решение нашел в интернете)
+//   let currency = parseInt(str.replace(/\D+/g,""));
+//   return currency;
+// }
+
+// function extractCurrencyValue(str) {
+//   return +str.slice(1);
+// }
