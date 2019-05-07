@@ -1,3 +1,4 @@
+'use strict';
 // var admin, name;
 // name = 'Василий';
 // admin = name;
@@ -727,4 +728,333 @@
 //     continue
 //   }
 //   alert (i);
+// }
+// "" + 1 + 0 //'10' +
+// "" - 1 + 0 //-1 +
+// true + false //1 +
+// 6 / "3" //2 +
+// "2" * "3" //6
+// 4 + 5 + "px" //'45px' -(9px)
+// "$" + 4 + 5 //'$45' +
+// "4" - 2 //2 +
+// "4px" - 2 //2 -(NaN)
+// 7 / 0 //NaN -(Infinity)
+// "  -9\n" + 5 //'  -9\n5' +
+// "  -9\n" - 5 //-14 +
+// 5 && 2 //2 +
+// 2 && 5 //5 +
+// 5 || 0 //5 +
+// 0 || 5 //5 +
+// null + 1 //1 +
+// undefined + 1 //1 -(NaN)
+// null == "\n0\n" //true -(false)
+// +null == +"\n0\n" //true +
+// for (i = 1; i <= 100; i++) {
+//   if (i % 3 == 0 && i % 5 == 0) {
+//     num = 'foobar'
+//   } else if (i % 3 == 0) {
+//     num = 'foo'
+//   } else if (i % 5 == 0) {
+//     num = 'bar'
+//   } else {
+//     num = i
+//   };
+//   alert(num);
+// }
+
+
+// "" + 1 + 0 // '10'
+// "" - 1 + 0 // -1
+// true + false // 1
+// 6 / "3" // 2
+// "2" * "3" // 6
+// 4 + 5 + "px" // '45px' > '9px'
+// "$" + 4 + 5 // '$45'
+// "4" - 2 // 2
+// "4px" - 2 // NaN
+// 7 / 0 // Infinity
+// "  -9  " + 5 // '  -9  5'
+// "  -9  " - 5 // -14
+// null + 1 // 1
+// undefined + 1 // NaN
+
+
+// При помощи цикла for выведите чётные числа от 2 до 10
+
+// for (i = 1; i <= 10; i++) {
+//   if (i % 2 == 0) {
+//     alert(i)
+//   }
+// }
+
+// Перепишите код, заменив цикл for на while, без изменения поведения цикла.
+
+// for (var i = 0; i < 3; i++) {
+//   alert( "номер " + i + "!" );
+// }
+
+// var i = 0;
+// while (i < 3) {
+//   alert( "номер " + i + "!" );
+//   i++;
+// }
+
+// Повторять цикл, пока ввод неверен
+
+// var num = +prompt('Enter number grater than 100', '');
+
+// while (num <= 100) {
+//   if (num == 0) {
+//     break
+//   } else {
+//     num = +prompt('Number you entered less than 100, enter another one', '');
+//   }
+// }
+
+
+// var num;
+
+// do {
+//   num = prompt("Введите число больше 100?", 0);
+// } while (num <= 100 && num != null);
+
+
+// Создайте код, который выводит все простые числа из интервала от 2 до 10
+// P.S. Код также должен легко модифицироваться для любых других интервалов.
+
+// loop:
+// for (let n = 2; n <= 10; n++) {
+//   for (let i = 2; i < n; i++) {
+//     if ((n % i) == 0) {
+//       continue loop;
+//     }
+//   }
+//   console.log (n);
+// }
+
+//Exercise
+// switch (browser) {
+//   case 'Edge':
+//     alert( "You've got the Edge!" );
+//     break;
+
+//   case 'Chrome':
+//   case 'Firefox':
+//   case 'Safari':
+//   case 'Opera':
+//     alert( 'Okay we support these browsers too' );
+//     break;
+
+//   default:
+//     alert( 'We hope that this page looks ok!' );
+// }
+
+
+// if (browser === 'Edge') {
+//   alert( "You've got the Edge!" );
+// } else if (browser === 'Chrome' 
+//         || browser === 'Firefox' 
+//         || browser === 'Safari' 
+//         || browser === 'Opera') {
+//   alert( 'Okay we support these browsers too' );
+// } else {
+//   alert( 'We hope that this page looks ok!' );
+// };
+
+
+// Exercise 2:
+// let a = +prompt('a?', '');
+
+// if (a == 0) {
+//   alert( 0 );
+// }
+// if (a == 1) {
+//   alert( 1 );
+// }
+
+// if (a == 2 || a == 3) {
+//   alert( '2,3' );
+// }
+
+
+// switch (a) {
+//   case 0:
+//     alert(0);
+//     break;
+
+//   case 1:
+//     alert(1);
+//     break;
+
+//   case 2:
+//   case 3:
+//     alert('2,3');
+//     break;
+// }
+
+
+/* === functions === */
+//rewrite the function:
+
+// function checkAge(age) {
+//   if (age > 18) {
+//     return true;
+//   } else {
+//     return confirm('Do you have your parents permission to access this page?');
+//   }
+// }
+
+// //using ? operator:
+// function checkAge(age) {
+//   return (age > 18) ? true : confirm('Do you have yuor parents permission to access this page?');
+// };
+
+// //using || operator
+// function checkAge(age) {
+//   return (age > 18) || confirm('Do you have yuor parents permission to access this page?');
+// };
+
+
+/* === Function min(a, b) === */
+//Write a function min(a,b) which returns the least of two numbers a and b.
+
+// function getMin(a, b) {
+//   return (a < b) ? a : b;
+// }
+
+
+//Write a function pow(x,n) that returns x in power n. Or, in other words, multiplies x by itself n times and returns the result.
+// *In this task the function should support only natural values of n: integers up from 1
+
+//Power -5 is not supported, use an integer greater than 0
+// let num, power;
+
+// do {
+//   num = prompt('Enter a number', '1');
+//   if (num === null) break;
+// }
+// while (!isNum(+num));
+
+// do {
+//   power = prompt('Enter a power (natural number up from 0)', '1');
+//   if (power === null) break;
+// }
+// while (!isNum(+power) || (power <= 0));
+
+// if (num && power) {
+//   alert(`${num} in power ${power} is ${getPow(num, power)}`);
+// }
+
+
+// function isNum(val) {
+//   return Number(val) === val;
+// };
+
+// function getPow(a, n) {
+//   let pow = a;
+//   for (let i = 1; i <= n; i++) {
+//     pow *= a;
+//   }
+//   return pow;
+// };
+
+
+//Replace Function Expressions with arrow functions in the code
+// function ask(question, yes, no) {
+//   if (confirm(question)) yes()
+//   else no();
+// }
+
+// ask(
+//   "Do you agree?",
+//   function() { alert("You agreed."); },
+//   function() { alert("You canceled the execution."); }
+// );
+
+//* decision *
+// ask(
+  // "Do you agree?",
+//   () => alert("You agreed."),
+//   () => alert("You canceled the execution.")
+// );
+
+
+// const name = 'Samsung Galaxy';
+// const query = 'sAms';
+
+// function has(str, part) {
+//   str = str.toUpperCase();
+//   part = part.toUpperCase();
+
+//   return str.includes(part);
+// }
+
+
+// //=========================
+
+// const word = 'samsung is gnusmas';
+
+// function up3FirstAndLast(str) {
+//   return 
+// }
+
+// up3FirstAndLast(word) === 'SAMsung is gnusMAS'
+
+
+// startsWith – true/false если строка начинается с подстроки
+// endsWith – true/false если строка заканчивается подстрокой
+
+
+/* === Ex: Uppercast the first character === */
+// function firstLetterToUpper (str) {
+//   let result = str.trimStart();
+//   if(!result) return '';
+
+//   const toUpper = result[0].toUpperCase();
+//   result = toUpper + result.slice(1);
+//   return result;
+// }
+
+
+/* === Ex: Check for spam === */
+// Write a function checkSpam(str) that returns true if str contains ‘viagra’ or ‘XXX’, otherwise false.
+// The function must be case-insensitive
+// function checkSpam(str) {
+//   let result = str.toUpperCase();
+//   return (result.includes('VIAGRA') 
+//         || result.includes('XXX'));
+// }
+
+
+/* === Ex: Truncate the text === */
+// Create a function truncate(str, maxlength) that checks the length of the str and, 
+// if it exceeds maxlength – replaces the end of str with the ellipsis character "…", 
+// to make its length equal to maxlength.
+// The result of the function should be the truncated (if needed) string.
+// function truncate(str, maxLength) {
+//   let result = str;
+  
+//   if (result.length < maxLength) {
+//     return result;
+//   }
+//   result = str.slice(0, maxLength - 1) + "\u2026";
+//   return result;
+// }
+
+//v.2
+// function truncate(str, maxLength) {
+//   return (str.length < maxLength) ? str :
+//                                   str.slice(0, maxLength - 1) + "\u2026";
+// }
+
+
+/* === Ex: Extract the money === */
+// function extractCurrencyValue(str) {
+//   //использование регулярного выражения (решение нашел в интернете)
+//   let currency = parseInt(str.replace(/\D+/g,""));
+//   return currency;
+// }
+
+// function extractCurrencyValue(str) {
+//   return +str.slice(1);
 // }
