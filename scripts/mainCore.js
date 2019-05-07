@@ -706,3 +706,25 @@
 //   ( select.value === 'black' ) ? update('black','white') : update('white','black');
 // }
 /*==========END Тернарный оператор==========*/
+
+// выводит все простые числа из интервала от 2 до 10
+
+// nextNum:
+// for (i = 1; i <= 10; i++) {
+//   for (n = 2; n < i; n++) {
+//     if (i % n == 0) {
+//       continue nextNum;
+//     }
+//   }
+//   console.log(i);
+// }
+
+
+// The loop below uses continue to output only odd values
+
+// for (let i = 0; i <= 10; i++) {
+//   if (i % 2 == 0) {
+//     continue
+//   }
+//   alert (i);
+// }
