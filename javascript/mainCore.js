@@ -1819,7 +1819,7 @@
 
 
 // const createBornAfterFilter = function() {
-//   return people.born > 
+//   return people.born > 100;
 // };
 
 // const wasBornAfter1800 = createBornAfterFilter(1800);
