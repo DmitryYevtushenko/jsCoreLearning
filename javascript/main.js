@@ -1,27 +1,18 @@
 'use strict';
 
-function camelize(str) {
-  return str
-  .split('-')
-  .map(
-    (word, index) => index === 0 ? word :
-    word[0].toUpperCase() + word.slice(1)
-  )
-  .join('');
-}
+// Task: Filter range
 
+const filterRange = (arr, minRange, maxRange) => {
+  let arrInRange = arr.map(
+    (arg) => {
+      if (arg >= minRange || arg <= maxRange) return arg
+    }
+  );
 
+  return arrInRange
+};
 
+let array = [5, 3, 8, 1];
 console.log(
-  camelize("background-color"), //== 'backgroundColor';
-  camelize("list-style-image"), //== 'listStyleImage';
-  camelize("-webkit-transition") //== 'WebkitTransition';
+  filterRange(array, 1, 3)
 );
-
-
-
-
-
-
-// camelize("background-color");
-// camelize("-webkit-transition");
