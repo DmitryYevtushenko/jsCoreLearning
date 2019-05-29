@@ -1,18 +1,17 @@
 'use strict';
 
 // Task: Filter range
+let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const filterRange = (arr, minRange, maxRange) => {
-  let arrInRange = arr.map(
-    (arg) => {
-      if (arg >= minRange || arg <= maxRange) return arg
-    }
+  let arrInRange = arr.filter(
+    (arg) => (arg >= minRange && arg <= maxRange)
   );
 
   return arrInRange
 };
 
-let array = [5, 3, 8, 1];
 console.log(
-  filterRange(array, 1, 3)
+  filterRange(array, 0, 3),
+  array
 );
