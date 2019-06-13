@@ -1,22 +1,5 @@
 'use strict';
 
-// Task: Filter range
-// let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-// const filterRange = (arr, minRange, maxRange) => {
-//   let arrInRange = arr.filter(
-//     (arg) => (arg >= minRange && arg <= maxRange)
-//   );
-
-//   return arrInRange
-// };
-
-// console.log(
-//   filterRange(array, 0, 3),
-//   array
-// );
-
-
 const people = [
   {"name": "Carolus Haverbeke", "sex": "m", "born": 1832, "died": 1905, "father": "Carel Haverbeke", "mother": "Maria van Brussel"},
   {"name": "Emma de Milliano", "sex": "f", "born": 1876, "died": 1956, "father": "Petrus de Milliano", "mother": "Sophia van Damme"},
@@ -58,3 +41,4 @@ const people = [
   {"name": "Maria Sturm", "sex": "f", "born": 1835, "died": 1917, "father": "Charles Sturm", "mother": "Seraphina Spelier"},
   {"name": "Jacobus Bernardus van Brussel", "sex": "m", "born": 1736, "died": 1809, "father": "Jan van Brussel", "mother": "Elisabeth Haverbeke"}
 ];
+
