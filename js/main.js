@@ -1,13 +1,16 @@
 'use strict';
 
-let vasya = {name: 'Vasiliy', age: 25};
-let petya = {name: 'Petr', age: 33};
-let masha = {name: 'Masha', age: 23};
+let vasya = {name: 'Vasiliy', surname: 'Pupkin', age: 35, id: 1};
+let petya = {name: 'Petr', surname: 'Ivanov', age: 41, id: 2};
+let masha = {name: 'Masha', surname: 'Petrova', age: 23, id: 3};
 
 let users = [vasya, petya, masha];
 
-let names = users.map(
-    (item) => item.name
+let userMapped = users.map(
+    (user) => ({
+      fullName: `${user.name} ${user.surname}`,
+      id: user.id,
+    })
 );
 
-console.log(names);
+console.log(userMapped);
