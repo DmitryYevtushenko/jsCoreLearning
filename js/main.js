@@ -1,22 +1,14 @@
 'use strict';
 
-//don't delete! use this as exercise decision
-let number = prompt('Enter a number', '0');
-//change on do while
-let power = prompt('Exponentiation in?', '0');
+let vasya = { name: 'Vasya', age: 25 };
+let petya = { name: 'petya', age: 37 };
+let masha = { name: 'masha', age: 21 };
 
+let users = [ vasya, petya, masha ];
 
-function pow(a, b) {
-  if (b === 1) return a;
-
-  let result = a;
-
-  for(let i = 2; i <= b; i++) {
-    result *= a;
-  }
-  return result;
+function getAverageAge(arr) {
+  let sum = arr.reduce( (prevValue, item) => prevValue + item.age, 0 );
+  return Math.round(sum / arr.length);
 }
 
-
-
-console.log( pow(number, power) );
+console.log( getAverageAge(users) );
