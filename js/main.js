@@ -10,5 +10,3 @@ function getAverageAge(arr) {
   let sum = arr.reduce( (prevValue, item) => prevValue + item.age, 0 );
   return Math.round(sum / arr.length);
 }
-
-console.log( getAverageAge(users) );
